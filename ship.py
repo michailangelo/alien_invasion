@@ -1,9 +1,9 @@
 import pygame
 
+
 class Ship:
 
-
-    def __init__(self,ai_settings,screen):
+    def __init__(self, ai_settings, screen):
         """Initialize the ship and set its starting position."""
         self.screen = screen
         self.ai_settings = ai_settings
