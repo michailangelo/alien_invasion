@@ -67,7 +67,7 @@ def check_keyup_events(event, ship):
         ship.moving_left = False
 
 
-def update_screen(ai_settings, screen, stats, ship, aliens, bullets, play_button):
+def update_screen(ai_settings, screen, stats, sb, ship, aliens, bullets, play_button):
     """Update images on the screen and flip to the new screen."""
     # Redraw the screen
     screen.fill(ai_settings.bg_color)
@@ -77,6 +77,7 @@ def update_screen(ai_settings, screen, stats, ship, aliens, bullets, play_button
     for bullet in bullets.sprites():
         bullet.draw_bullet()
 
+    sb.show_score()
     if not stats.game_active:
         play_button.draw_button()
 
